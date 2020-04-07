@@ -8,6 +8,9 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from "./shared/api.service";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { AngularMaterialModule } from './material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule, 
+    HttpClientModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
